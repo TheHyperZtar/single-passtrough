@@ -3,6 +3,9 @@ set -x
   
 virsh nodedev-reattach pci_0000_03_00_1
 virsh nodedev-reattach pci_0000_03_00_0
+
+modprobe -r vfio-pci
+
 modprobe snd_hda_intel
 modprobe amdgpu
 
